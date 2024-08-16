@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>GoalTracker Pro - Enhanced</title>
+    <link rel="stylesheet" href="src/style.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <h1>GoalTracker - ردیاب هدف</h1>
+
+        <div class="goal-form">
+            <input type="text" id="goalTitle" placeholder="هدف خود را وارد کنید">
+            <input type="date" id="goalDate">
+            <button onclick="addGoal()">+ هدف</button>
+        </div>
+
+        <ul id="goalList" class="goal-list"></ul>
+    </div>
+
+    <div id="contextMenu" class="context-menu">
+        <ul>
+            <li onclick="editGoal(selectedGoalId)">ویرایش</li>
+            <li onclick="showGoalDetails(selectedGoalId)">دیدن جزئیات</li>
+            <li onclick="deleteGoal(selectedGoalId)">حذف</li>
+        </ul>
+    </div>
+    <script src="runtime/hammer.min.js"></script>
+    <script>
+        var now = new Date();
+        var date = document.getElementById("goalDate");
+        
+        date.valueAsDate = now;
+
+         
+    </script>
+    <script src="src/script.js"></script>
+
+</body>
+
+</html>

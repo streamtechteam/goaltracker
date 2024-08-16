@@ -1,0 +1,146 @@
+@font-face {
+    font-family: 'Vazir';
+    src: url(../fonts/Vazir.ttf);
+}
+
+body {
+    font-family: 'Vazir';
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    direction: rtl;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+.goal-form {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="date"] {
+    font-family: 'Vazir';
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+button {
+    font-family: 'Vazir';
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.goal-list {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+.goal-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.goal-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.goal-item .goal-info {
+    flex-grow: 1;
+}
+
+.goal-item .goal-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    height: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    background-color: #4CAF50;
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.3s ease-in-out;
+}
+
+.context-menu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.context-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.context-menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.context-menu li:hover {
+    background-color: #f5f5f5;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .goal-form,
+    .goal-item {
+        padding: 15px;
+    }
+}
